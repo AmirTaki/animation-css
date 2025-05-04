@@ -39,8 +39,18 @@ button:hover {
     color : white;
     font-size: 1.35rem;  
     
-    animation-name : spin ;  /* name animation */
-    animation-duration: 3s    /* time animation */
+    animation-name : spin ;               /* name animation */
+    animation-duration: 3s   ;           /* time animation */
+    animation-timing-function: ease;    /* speed animataion */
+    animation-delay: 1s ;              /* delay  animation*/
+    animation-iteration-count: infinite;     /* Number of animations  _ infinite */  
+    animation-direction:normal ;  /*  Play the animation from beginning to end  : reverse , alternate-reverse  */ 
+    animation-fill-mode:forwards ; /* Stopping the element at the end of the animation frame*/
+    animation-play-state: paused; /* Stop animation in specific views*/
+}   
+
+.element:hover {
+    animation-play-state: running;  /* Stop animation in specific views*/
 }
 
 @keyframes spin{
