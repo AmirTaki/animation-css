@@ -1,6 +1,7 @@
 * {
 padding: 0;
 margin: 0;
+font-family: Poppins;
 
 }
 body {
@@ -17,7 +18,6 @@ button {
     padding: .8em 2.5em;
     color : white;
     border-radius: 100px;
-    font-family: Poppins;
     font-size: 1.2rem;
     font-weight: 500;
     cursor: pointer;
@@ -28,3 +28,34 @@ button:hover {
     scale: 2;
 }
 
+.element {
+    height: 200px;
+    width: 200px;
+    background: #0071FF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    color : white;
+    font-size: 1.35rem;  
+    
+    animation-name : spin ;  /* name animation */
+    animation-duration: 3s    /* time animation */
+}
+
+@keyframes spin{
+    0%{
+
+    }
+    50%{
+        scale: 2;   /* size element */
+        transform: rotate(0);
+        border-radius: 0;
+    }
+
+    100%{
+        transform : rotate(360deg);
+        border-radius : 50%;
+        scale : 2   /* save size element */
+    }
+}
